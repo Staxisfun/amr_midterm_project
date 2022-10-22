@@ -59,8 +59,5 @@ Admins can send a message via app, email, or text back on negotiations in buying
 
 
 aldwin-test branch
-<<<<<<< HEAD
 Matt-test branch
-=======
 ray-test branch
->>>>>>> 11f12469a4aba1e8c7889f381d818da330ec8338
