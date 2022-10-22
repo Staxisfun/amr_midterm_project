@@ -55,9 +55,3 @@ Admins can post items, which can be seen by others
 Admins can remove items from the site
 Admins can mark items as SOLD!,
 Admins can send a message via app, email, or text back on negotiations in buying the said item 
-
-
-
-aldwin-test branch
-Matt-test branch
-ray-test branch
