@@ -5,7 +5,6 @@ User Stories
 
 1. As a `user`, I want to see `listings`, because `I want to see what's in stock.` 
 
-
 2. As a `user`, I want to `favorite listings`, because I can track them.
 Given that I'm seeing listings. When I tap `favorite button`. Save it to my `favorite listings.`
 
@@ -48,16 +47,20 @@ Given that I've received a message from a buyer. when i tap `reply button` open 
 users can see featured items on a main feed
 users can filter items by price,
 users can favourite items to check up on them later
-users can send messages to the user that is listing the item
+users can send messages to the admin that is listing the item
 
 ===
 ### ADMIN
-Admins can:
-post items, which can be seen by others
-remove items from the site
-mark items as SOLD!,
-send a message via app, email, or text back on negotiations in buying the said item 
+Admins can post items, which can be seen by others
+Admins can remove items from the site
+Admins can mark items as SOLD!,
+Admins can send a message via app, email, or text back on negotiations in buying the said item 
+
 
 
 aldwin-test branch
+<<<<<<< HEAD
 Matt-test branch
+=======
+ray-test branch
+>>>>>>> 11f12469a4aba1e8c7889f381d818da330ec8338
