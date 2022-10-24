@@ -48,6 +48,11 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+app.get('/favorites', (req, res) => {
+  res.render('favorites');
+});
+
+
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
