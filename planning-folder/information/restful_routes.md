@@ -1,15 +1,15 @@
-Browser GET   /users
+<!-- Browser GET   /users -->
 Read    GET   /users/:id
-Edit    POST  /users/:id
-Add     POST  /users
-Delete  POST  /users/:id/delete
+<!-- Edit    POST  /users/:id -->
+<!-- Add     POST  /users -->
+<!-- Delete  POST  /users/:id/delete -->
 
 
 
 
 Browser GET   /listings
 Read    GET   /listings/:id
-Edit    POST  /listings/:id
+<!-- Edit    POST  /listings/:id -->
 Add     POST  /listings
 Delete  POST  /listings/:id/delete
 
