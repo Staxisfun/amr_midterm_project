@@ -18,7 +18,7 @@ Delete  POST  /listings/:id/delete
 
 
 Browser GET   /favorites
-Read    GET   /favorites/:id
-Edit    POST  /favorites/:id
+Read    GET   /favorites/:id  redirect ==> Read    GET   /listings/:id
+<!-- Edit    POST  /favorites/:id -->
 Add     POST  /favorites
-Delete  POST  /favorites/:id/delete
+<!-- Delete  POST  /favorites/:id/delete -->
