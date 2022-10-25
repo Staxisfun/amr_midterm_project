@@ -7,8 +7,10 @@ router.get('/', (req, res) => {
   let listings = []
   getListings().then((data) => {
     console.log("data: ", data)
-    listings = JSON.stringify(data)
-    res.render('listings', {listings:listings});
+    // listings = JSON.stringify(data)
+    res.render('listings', {data});
+    // listings = JSON.stringify(data)
+    // res.render('listings', {listings:listings});
   })
   console.log("listing: ", listings)
 

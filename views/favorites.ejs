@@ -9,7 +9,13 @@
 <body>
   <%- include('partials/_header') %>
 <h1>Favorites</h1>
-<p><%= favorites %></p>
+<section id="listings">
+  <% for (let datum of data) { %>
+  <div id="listing">Title <%= datum.title %>
+  Image <%= datum.img %>
+  Price <%= datum.price %></div>
+  <% } %>
+  </section>
 
 </body>
 </html>

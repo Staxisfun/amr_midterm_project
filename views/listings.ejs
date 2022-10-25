@@ -9,6 +9,12 @@
 <body>
   <%- include('partials/_header') %>
 <h1>Listings</h1>
-<p><%= listings %></p>
+<section id="listings">
+<% for (let datum of data) { %>
+<div id="listing">Title <%= datum.title %>
+Image <%= datum.img %>
+Price <%= datum.price %></div>
+<% } %>
+</section>
 </body>
 </html>
