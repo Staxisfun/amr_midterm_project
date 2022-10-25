@@ -1,17 +1,18 @@
 const express = require('express');
 const router  = express.Router();
+const { getFavorites } = require('../db/queries/favorites');
+
 
 router.get('/', (req, res) => {
-  res.render('favorites');
+  let favorites = []
+  getFavorites().then((data) => {
+    console.log("favorites data: ", data)
+    favorites = JSON.stringify(data)
+    res.render('favorites', {favorites});
+  })
+
 });
 
-// router.get('/:id', (req, res) => {
-//   res.redirect('listings_id');
-// });
-
-// router.post('/', (req, res) => {
-//   res.render('');
-// });
 
 
 

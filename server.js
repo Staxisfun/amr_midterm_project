@@ -1,5 +1,6 @@
 // load .env data into process.env
 require('dotenv').config();
+const cookieParser = require('cookie-parser');
 
 // Web server config
 const sassMiddleware = require('./lib/sass-middleware');
@@ -25,6 +26,7 @@ app.use(
   })
 );
 app.use(express.static('public'));
+app.use(cookieParser());
 
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
