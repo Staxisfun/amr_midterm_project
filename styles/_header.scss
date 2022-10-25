@@ -1,0 +1,39 @@
+// See: https://sass-lang.com/
+
+body,
+html {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #cdcbcb
+
+}
+
+a {
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  background-color: rgb(79, 78, 78);
+  justify-content: space-between;
+  height: 5em;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.site-title {
+  padding-left: 10px;
+  color: #f6f6f6;
+  font-weight: 800;
+  font-size: 5em;
+}
+
+.nav-right {
+  font-weight: 10;
+  display: flex;
+  width: 25%;
+  font-size: 20px;
+  justify-content: space-between;
+  .link {
+    color: #f9fafb;
+  }
+}
