@@ -19,7 +19,7 @@
     <% for (let datum of data) { %>
       <div class="listing">
         <div> <%= datum.title %></div>
-        <a href="/listing">
+        <a href="/listings/<%= datum.id %>">
           <img src="<%= datum.img %>"/>
         </a>
         <div class="price">$ <%= Number(datum.price) / 100 %></div>

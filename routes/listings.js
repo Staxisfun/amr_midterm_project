@@ -7,16 +7,21 @@ router.get('/create', (req, res) => {
   res.render('listings-create');
 });
 
+
+
+
 router.get('/:id', (req, res) => {
   const id = req.params.id
+  const userID = +req.headers.cookie.split("=")[1];    // take cookies from header -- '+' coverts it to number
+  console.log("userID:", userID);
   console.log("listings id:", id)
   getListing(id).then((data) => {
-    console.log("listing data:", data);
-    return res.render('listing', {data});
+    console.log("listing data:", {data : {...data, ...{currentUserId: userID}}});
+    res.render('listing', {data : {...data, ...{currentUserId: userID}}});
   })
-  res.render('listing');
-
 })
+
+
 
 
 router.get('/', (req, res) => {

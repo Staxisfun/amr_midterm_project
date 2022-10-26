@@ -12,26 +12,29 @@
   <h1>Listing</h1>
   <div class="container">
 
-    <img src="https://compass-ssl.xbox.com/assets/9c/94/9c944d9c-7ef1-4b46-9f68-9b02966d3993.jpg?n=Halo-Infinite_GLP-Page-Hero-0_1083x609.jpg"/>
+    <img src="<%= data.img %>"/>
 
     <div class="listing">
 
-      <div class="title"><span class="form-title"></span>Halo</div>
+      <div class="title"><span class="form-title"></span><%= data.title %></div>
 
-      <div class="description"><span class="form-title"></span>no, not that beyonce song</textarea></div>
+      <div class="description"><span class="form-title"></span><%= data.description %></textarea></div>
 
-      <div class="price"><span class="form-title"></span>$ 50</div>
+      <div class="price"><span class="form-title"></span>$ <%= data.price /100 %></div>
 
       <div class="bottom-listing">
 
         <!-- put if conditions here if NOT admin -->
-        <button type="submit" class="favorite">Add To Favorites</button>
-        <button type="submit" class="mailto">Email Seller</button>
+          <% if (data.user_id === data.currentUserId) { %>
+          <button type="submit" class="sold">Mark Sold</button>
+          <button type="submit" class="remove">Remove Listing</button>
 
-        <!-- put else condition here if admin -->
+          <% } else { %>
 
-        <!-- <button type="submit" class="sold">Mark Sold</button>
-        <button type="submit" class="remove">Remove Listing</button> -->
+            <button type="submit" class="favorite">Add To Favorites</button>
+            <button type="submit" class="mailto">Email Seller</button>
+
+          <%  } %>
       </div>
 
     </div>
