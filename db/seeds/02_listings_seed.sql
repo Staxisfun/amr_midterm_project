@@ -9,4 +9,3 @@ INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (
 INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (9, 'God Of War', 'Kratos.. nuff said', 7000, 'http://blog.bestbuy.ca/wp-content/uploads/2018/04/GOW-OG-image.jpg', FALSE);
 INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (8, 'Grand Theft Auto', 'okayish soundtrack', 4000, 'https://m.media-amazon.com/images/M/MV5BMTAyYWYyOTMtNmUzNS00NzNjLTkyZTUtZjhlZjMzYzJmNzM5XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg', FALSE);
 INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (8, 'Dark Souls', 'good luck', 5000, 'https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA08495_00/4/i_e1d39aec96b1583322c0c83a100142424b2dadd351510fcf0f2c3eed02830576/i/icon0.png', FALSE);
-

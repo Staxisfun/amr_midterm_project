@@ -7,5 +7,15 @@ const getFavorites = () => {
     });
 };
 
+const getFilteredByPrice = (min, max , id) => {
+  return db.query(`SELECT * FROM listings
+    JOIN favorites ON listings.user_id = favorites.user_id
+    WHERE favorites.user_id = ${id}`)
+    .then(data => {
+      return data.rows
+    })
+}
 
-module.exports = { getFavorites };
+module.exports = { getFavorites, getFilteredByPrice };
+
+
