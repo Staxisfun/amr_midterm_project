@@ -13,18 +13,18 @@
   <div class="price-filters">
     <input type="number" name="lowest_price" placeholder="Lowest Price">
     <input type="number" name="highest_price" placeholder="Highest Price">
+    <button type="submit" form="nameform" value="Submit">Submit</button>
   </div>
-  <section id="listings">
+  <section class="listings">
     <% for (let datum of data) { %>
-      <div id="listing">
+      <div class="listing">
         <div> <%= datum.title %></div>
         <a href="/listing">
           <img src="<%= datum.img %>"/>
         </a>
-        <div id="price">$ <%= Number(datum.price) / 100 %></div>
+        <div class="price">$ <%= Number(datum.price) / 100 %></div>
       </div>
     <% } %>
-
 
 </section>
 </body>

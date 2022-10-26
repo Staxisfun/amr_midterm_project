@@ -25,7 +25,12 @@ h1 {
 
 a {
   text-decoration: none;
+  &:hover {
+    color:grey;
+  }
 }
+
+
 nav {
   display: flex;
   background-color: rgb(79, 78, 78);
