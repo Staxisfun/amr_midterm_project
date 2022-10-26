@@ -6,6 +6,6 @@ CREATE TABLE listings (
   title VARCHAR(255) NOT NULL,
   description TEXT,
   price INTEGER NOT NULL DEFAULT 0,
-  img VARCHAR(255) NOT NULL,
+  img TEXT NOT NULL,
   is_sold BOOLEAN DEFAULT FALSE
 );
