@@ -1,3 +1,4 @@
+const { render } = require("ejs");
 const express = require("express");
 const router = express.Router();
 const { getFavorites, getFilteredByPrice } = require("../db/queries/favorites");
@@ -24,12 +25,12 @@ router.get("/", (req, res) => {
 
 //filter by price range
 router.get("/filter", (req, res) => {
-  const min = req.query.min
-  const max = req.query.max
+  // const min = req.query.min
+  // const max = req.query.max
 
   getFilteredByPrice(null, null, '10')
     .then(data => {
-     console.log('getFilteredByPrice', data)
+     res.render("favorites", { data });
   })
 })
 
