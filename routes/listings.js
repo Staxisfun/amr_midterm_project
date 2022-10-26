@@ -11,11 +11,11 @@ router.get('/create', (req, res) => {
 
 
 router.get('/:id', (req, res) => {
-  const id = req.params.id
+  const listingID = req.params.id
   const userID = +req.headers.cookie.split("=")[1];    // take cookies from header -- '+' coverts it to number
   console.log("userID:", userID);
-  console.log("listings id:", id)
-  getListing(id).then((data) => {
+  console.log("listings id:", listingID)
+  getListing(listingID).then((data) => {
     console.log("listing data:", {data : {...data, ...{currentUserId: userID}}});
     res.render('listing', {data : {...data, ...{currentUserId: userID}}});
   })
