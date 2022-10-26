@@ -1,10 +1,10 @@
 const express = require('express');
-const { getListings } = require('../db/queries/listings');
+const { getListings, getListing } = require('../db/queries/listings');
 const router  = express.Router();
 
 router.get('/', (req, res) => {
   // let listings = JSON.stringify(getListings())
-  let listings = []
+  let listings = [];
   getListings().then((data) => {
     console.log("data: ", data)
     // listings = JSON.stringify(data)
@@ -19,6 +19,15 @@ router.get('/', (req, res) => {
 router.get('/create', (req, res) => {
   res.render('listings-create');
 });
+
+router.get('/:id', (req, res) => {
+  getListing().then((data) => {
+    console.log("listing data:", data);
+    res.render('listing', {data});
+  })
+  res.render('listing');
+})
+
 
 
 

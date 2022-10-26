@@ -1,3 +1,18 @@
+.price-filters {
+  display: flex;
+  justify-content: center;
+
+}
+
+input {
+  margin: 0 2em;
+  border: none;
+  appearance: none;
+  padding: 12px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
 #listings {
   display: flex;
   flex-wrap: wrap;
