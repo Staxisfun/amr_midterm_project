@@ -10,17 +10,18 @@
 <body>
   <%- include('partials/_header') %>
 <h1>Listings</h1>
-<div class="price-filters">
-  <input type="number" name="lowest_price" placeholder="Lowest Price">
-  <input type="number" name="highest_price" placeholder="Highest Price">
-</div>
-<section id="listings">
+  <div class="price-filters">
+    <input type="number" name="lowest_price" placeholder="Lowest Price">
+    <input type="number" name="highest_price" placeholder="Highest Price">
+    <button type="submit" form="nameform" value="Submit">Submit</button>
+  </div>
+<section class="listings">
 
   <% for (let datum of data) { %>
-    <div id="listing">
+    <div class="listing">
       <div> <%= datum.title %></div>
       <img src="<%= datum.img %>"/>
-      <div id="price">$ <%= Number(datum.price) / 100 %></div>
+      <div class="price">$ <%= Number(datum.price) / 100 %></div>
     </div>
   <% } %>
 

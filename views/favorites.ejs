@@ -11,18 +11,20 @@
 <body>
   <%- include('partials/_header') %>
   <h1>Favorites</h1>
-  <div class="price-filters">
-    <input type="number" name="minimum_price_per_night" placeholder="Lowest Price" id="lowest-price">
-    <input type="number" name="minimum_price_per_night" placeholder="Highest Price" id="highest-price">
-  </div>
-  <section id="listings">
+    <div class="price-filters">
+      <input type="number" name="lowest_price" placeholder="Lowest Price">
+      <input type="number" name="highest_price" placeholder="Highest Price">
+      <button type="submit" form="nameform" value="Submit">Submit</button>
+    </div>
+  <section class="listings">
     <% for (let datum of data) { %>
-    <div id="listing">Title <%= datum.title %>
+    <div class="listing">Title <%= datum.title %>
       Image <%= datum.img %>
       Price <%= datum.price %>
     </div>
     <% } %>
   </section>
+
 
 </body>
 </html>
