@@ -43,4 +43,31 @@ const getListing = (id) => {
     });
 };
 
-module.exports = { getListings, getListing, getAllListings };
+const markListingSold = (id) => {
+  return db.query(`
+  UPDATE listings
+  SET is_sold = true
+  WHERE id = $1
+  `, [id])
+  .then(res => {
+    return res.rows[0];
+  });
+}
+
+const removeListing = (id) => {
+  return db.query(`
+  DELETE FROM listings
+  WHERE id = $1
+  `, [id])
+  .then(res => {
+    return res.rows
+  });
+}
+
+module.exports = {
+  getListings,
+  getListing,
+  getAllListings,
+  markListingSold,
+  removeListing
+ };
