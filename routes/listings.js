@@ -1,13 +1,11 @@
 const express = require('express');
-const { getListings, getListing } = require('../db/queries/listings');
+const { getListings, getListing, getAllListings } = require('../db/queries/listings');
 const router  = express.Router();
 
 
 router.get('/create', (req, res) => {
   res.render('listings-create');
 });
-
-
 
 
 router.get('/:id', (req, res) => {
@@ -23,29 +21,21 @@ router.get('/:id', (req, res) => {
 
 })
 
-
-
+router.post('/', (req, res) => {
+  let min = req.body.lowest_price * 100;
+  let max = req.body.highest_price * 100;
+  getListings(min, max)
+    .then((data) => {
+      res.render('listings', {data});
+    })
+});
 
 router.get('/', (req, res) => {
-  getListings().then((data) => {
+  getAllListings()
+  .then((data) => {
     res.render('listings', {data});
   })
 });
 
 
-
-
-// router.get('/:id', (req, res) => {
-//   getListing().then((data) => {
-//     console.log("listing data:", data);
-//     res.render('listing', {data});
-//   })
-//   res.render('listing');
-// })
-
-
-
-
-
-
-    module.exports = router;
+module.exports = router;

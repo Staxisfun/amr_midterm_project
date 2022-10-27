@@ -22,15 +22,5 @@ router.get("/", (req, res) => {
     });
 });
 
-//filter by price range
-// router.get("/filter", (req, res) => {
-//   // const min = req.query.min
-//   // const max = req.query.max
-
-//   getFilteredByPrice(null, null, '10')
-//     .then(data => {
-//      res.render("favorites", { data });
-//   })
-// })
 
 module.exports = router;
