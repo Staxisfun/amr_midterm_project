@@ -20,7 +20,7 @@
     <% for (let i = data.length - 1; i >= 0; i--) { %>
       <div class="listing">
         <div> <%= data[i].title %></div>
-        <a href="/listing">
+        <a href="/listings/<%= data[i].id %>">
           <img src="<%= data[i].img %>"/>
         </a>
         <div class="price">$ <%= Number(data[i].price) / 100 %></div>
