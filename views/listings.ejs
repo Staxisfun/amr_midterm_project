@@ -10,11 +10,11 @@
 <body>
   <%- include('partials/_header') %>
   <h1>Listings</h1>
-  <div class="price-filters">
+  <form action="/listings" method="post" class="price-filters">
     <input type="number" name="lowest_price" placeholder="Lowest Price">
     <input type="number" name="highest_price" placeholder="Highest Price">
-    <button type="submit" form="nameform" value="Submit">Submit</button>
-  </div>
+    <button type="submit" value="Submit">Submit</button>
+  </form>
   <section class="listings">
     <% for (let datum of data) { %>
       <div class="listing">
