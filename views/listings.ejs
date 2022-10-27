@@ -16,13 +16,13 @@
     <button type="submit" value="Submit">Submit</button>
   </form>
   <section class="listings">
-    <% for (let datum of data) { %>
+    <% for (let i = data.length - 1; i >= 0; i--) { %>
       <div class="listing">
-        <div> <%= datum.title %></div>
-        <a href="/listings/<%= datum.id %>">
-          <img src="<%= datum.img %>"/>
+        <div> <%= data[i].title %></div>
+        <a href="/listings/<%= data[i].id %>">
+          <img src="<%= data[i].img %>"/>
         </a>
-        <div class="price">$ <%= Number(datum.price) / 100 %></div>
+        <div class="price">$ <%= Number(data[i].price) / 100 %></div>
       </div>
     <% } %>
 
