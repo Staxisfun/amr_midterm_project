@@ -17,7 +17,6 @@ router.get('/:id', (req, res) => {
       if (user.admin) {
       return res.redirect('/admin')
       }
-
       res.redirect('/listings');
     })
 });

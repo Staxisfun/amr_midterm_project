@@ -1,7 +1,7 @@
 const db = require('../connection');
 
 const getListings = (min, max) => {
-  if(!max) {
+  if (!max) {
     return db.query(`
     SELECT * FROM listings
     WHERE price >= $1;`, [min])
@@ -14,9 +14,9 @@ const getListings = (min, max) => {
     return db.query(`
   SELECT * FROM listings
   WHERE price <= $1;`, [max])
-    .then(listings => {
-      return listings.rows;
-    });
+      .then(listings => {
+        return listings.rows;
+      });
   }
 
   return db.query(`
@@ -25,15 +25,15 @@ const getListings = (min, max) => {
     AND price <= $2;`, [min, max])
     .then(listings => {
       return listings.rows;
-  });
+    });
 };
 
-const createListing = (listing) => {
+const createListing = (listing, userID) => {
 
-return db.query(`INSERT INTO listings (title, description, price, img) VALUES ($1, $2, $3, $4)`, [listing.title, listing.description, listing.price, listing.img])
+  return db.query(`INSERT INTO listings (user_id, title, description, price, img) VALUES ($1, $2, $3, $4, $5)`, [userID,listing.title, listing.description, listing.price, listing.img]);
 
 
-}
+};
 
 
 const getAllListings = () => {
@@ -51,4 +51,32 @@ const getListing = (id) => {
     });
 };
 
-module.exports = { getListings, getListing, getAllListings, createListing };
+const markListingSold = (id) => {
+  return db.query(`
+  UPDATE listings
+  SET is_sold = true
+  WHERE id = $1
+  `, [id])
+    .then(res => {
+      return res.rows[0];
+    });
+};
+
+const removeListing = (id) => {
+  return db.query(`
+  DELETE FROM listings
+  WHERE id = $1
+  `, [id])
+    .then(res => {
+      return res.rows;
+    });
+};
+
+module.exports = {
+  getListings,
+  getListing,
+  getAllListings,
+  markListingSold,
+  removeListing,
+  createListing
+};

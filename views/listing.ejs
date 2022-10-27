@@ -10,31 +10,47 @@
 <body>
   <%- include('partials/_header') %>
   <h1>Listing</h1>
+
   <div class="container">
 
-    <img src="<%= data.img %>"/>
+    <% if (listing.is_sold) { %>
+      <img src="https://www.pngmart.com/files/7/Sold-PNG-Photo.png"/>
+    <% } else { %>
+      <img src="<%= listing.img %>"/>
+    <%  } %>
 
-    <div class="listing">
+  <div class="listing">
 
-      <div class="title"><span class="form-title"></span><%= data.title %></div>
+      <div class="title"><span class="form-title"></span><%= listing.title %></div>
 
-      <div class="description"><span class="form-title"></span><%= data.description %></textarea></div>
+      <div class="description"><span class="form-title"></span><%= listing.description %></textarea></div>
 
-      <div class="price"><span class="form-title"></span>$ <%= data.price /100 %></div>
+      <div class="price"><span class="form-title"></span>$ <%= listing.price /100 %></div>
 
       <div class="bottom-listing">
 
-        <!-- put if conditions here if NOT admin -->
-          <% if (data.user_id === data.currentUserId) { %>
-          <button type="submit" class="sold">Mark Sold</button>
-          <button type="submit" class="remove">Remove Listing</button>
+        <% if (listing.user_id === user.id) { %>
+          <form action="/listings/<%= listing.id %>/sold" method="post" class="bottom-listing">
+            <button type="submit" class="sold">Mark Sold</button>
+          </form>
 
-          <% } else { %>
+          <form action="/listings/<%= listing.id %>/remove" method="post" class="bottom-listing">
+            <button type="submit" class="remove">Remove Listing</button>
+          </form>
 
+        <% } else { %>
+          <form action="/favorites" method="post" class="bottom-listing">
+            <input name="listing_id" value="<%= listing.id %>" hidden>
             <button type="submit" class="favorite">Add To Favorites</button>
-            <button type="submit" class="mailto">Email Seller</button>
+          </form>
 
-          <%  } %>
+          <form action="/listings" method="post" class="bottom-listing">
+            <button type="submit" class="mailto">
+              <a href="mailto:<%= seller && seller.email %>">Email Seller</a>
+            </button>
+          </form>
+
+        <%  } %>
       </div>
 
     </div>

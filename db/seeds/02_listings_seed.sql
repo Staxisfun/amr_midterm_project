@@ -9,3 +9,18 @@ INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (
 INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (9, 'God Of War', 'Kratos.. nuff said', 7000, 'http://blog.bestbuy.ca/wp-content/uploads/2018/04/GOW-OG-image.jpg', FALSE);
 INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (8, 'Grand Theft Auto', 'okayish soundtrack', 4000, 'https://m.media-amazon.com/images/M/MV5BMTAyYWYyOTMtNmUzNS00NzNjLTkyZTUtZjhlZjMzYzJmNzM5XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg', FALSE);
 INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (8, 'Dark Souls', 'good luck', 5000, 'https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA08495_00/4/i_e1d39aec96b1583322c0c83a100142424b2dadd351510fcf0f2c3eed02830576/i/icon0.png', FALSE);
+
+
+INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (10, 'Minecraft', 'funfunfun', 3000, 'https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png', FALSE);
+INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (10, 'Persona 5 The Royal', 'Japanese game', 6000, 'https://www.mobygames.com/images/covers/l/636447-persona-5-royal-playstation-4-front-cover.jpg', FALSE);
+INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (9, 'Zelda BOTW', 'good adventure', 1500, 'https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg', FALSE);
+INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (9, 'Elden Ring', 'PREPARE TO DIE', 6900, 'https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/aGhopp3MHppi7kooGE2Dtt8C.png', FALSE);
+INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (9, 'Forza Horizon 5', 'best racing game', 5000, 'https://cdn.akamai.steamstatic.com/steam/apps/1551360/capsule_616x353.jpg?t=1656026814', FALSE);
+INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (9, 'Mass Effect', 'one of the best RPGs', 3000, 'https://upload.wikimedia.org/wikipedia/en/0/05/MassEffect2_cover.PNG', FALSE);
+INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (9, 'Red Dead Redemption 2', 'cowboys', 1500, 'https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/capsule_616x353.jpg?t=1656615305', FALSE);
+INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (9, 'Grand Theft auto 5', 'too much fun', 4500, 'https://assets-prd.ignimgs.com/2021/12/17/gta-5-button-2021-1639777058682.jpg', FALSE);
+INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (9, 'Resident Evil 4', 'zombies', 4000, 'https://www.residentevil.com/re4/assets/images/common/share-re.png', FALSE);
+INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (9, 'Destiny 2', 'FPS', 1000, 'https://www.mobygames.com/images/covers/l/425032-destiny-2-playstation-4-front-cover.png', FALSE);
+INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (9, 'Uncharted 2', 'Naughty dog best game', 1200, 'https://upload.wikimedia.org/wikipedia/en/7/7b/Uncharted_2_box_artwork.jpg', FALSE);
+INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (8, 'The last of us', 'Naughty dog specail', 1000, 'https://upload.wikimedia.org/wikipedia/en/4/46/Video_Game_Cover_-_The_Last_of_Us.jpg', FALSE);
+INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (8, 'Hades', 'rouge like', 1000, 'https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Hades_cover_art.jpg/220px-Hades_cover_art.jpg', FALSE);
