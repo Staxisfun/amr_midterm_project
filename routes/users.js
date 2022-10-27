@@ -13,13 +13,13 @@ router.get('/:id', (req, res) => {
   const id = req.params.id
   res.cookie('user_id', req.params.id)
   getUserById(id)
-  .then(user => {
-    if (user.admin) {
-    return res.redirect('/admin')
-    }
+    .then(user => {
+      if (user.admin) {
+      return res.redirect('/admin')
+      }
 
-    res.redirect('/listings');
-  })
+      res.redirect('/listings');
+    })
 });
 
 module.exports = router;
