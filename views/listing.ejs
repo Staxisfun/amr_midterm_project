@@ -31,7 +31,7 @@
 
           <% } else { %>
 
-            <button type="submit" class="favorite">Add To Favorites</button>
+            <form method="POST" action="/listings/<%=data.id%>"><button type="submit" class="favorite">Add To Favorites</button></form>
             <button type="submit" class="mailto">Email Seller</button>
 
           <%  } %>

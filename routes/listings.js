@@ -1,6 +1,7 @@
 const express = require('express');
 const { getUserById } = require('../db/queries/users');
 const { getListings, getListing, getAllListings } = require('../db/queries/listings');
+const { postFavorite } = require('../db/queries/favorites');
 const router  = express.Router();
 
 router.get('/create', (req, res) => {
@@ -46,6 +47,13 @@ router.post('/', (req, res) => {
 });
 
 
+router.post('/:id', (req, res) => {
+  const listingID = req.params.id
+  const userID = +req.headers.cookie.split("=")[1];
+  postFavorite(userID, listingID).then(() =>{
+    res.redirect('/listings')
+  })
+})
 
 
 module.exports = router;

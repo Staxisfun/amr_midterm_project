@@ -11,6 +11,12 @@ const getFavorites = (id) => {
     });
 };
 
+const postFavorite = (id, listing) => {
+  return db.query(`INSERT INTO favorites (user_id, listing_id)
+    VALUES ($1, $2);
+  `, [id, listing])
+}
+
 // const getFilteredByPrice = (min, max , id) => {
 //   return db.query(`SELECT * FROM listings
 //     JOIN favorites ON listings.user_id = favorites.user_id
@@ -20,6 +26,6 @@ const getFavorites = (id) => {
 //     })
 // }
 
-module.exports = { getFavorites };
+module.exports = { getFavorites, postFavorite };
 
 

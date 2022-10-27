@@ -12,13 +12,14 @@ router.get("/", (req, res) => {
   const userID = +req.headers.cookie.split("=")[1];
   console.log('userID=== ', userID);
   getUserById(userID).then((user) =>{
-    getFavorites(userID)
-      .then((data) => {
-        console.log("favorites data===", data);
+    getFavorites(userID).then((favoritesData) => {
+      getListing(listingID).then((listingData) => {
+        console.log("favorites data===", favoritesData);
         console.log("user:", user);
-        res.render("favorites", { data, user });
+        res.render("favorites", { favoritesData, listingData, user });
       });
     })
+  })
 });
 
 
