@@ -1,5 +1,5 @@
 const express = require('express');
-const { getListings, getListing, getAllListings } = require('../db/queries/listings');
+const { getListings, getListing, getAllListings, createListing } = require('../db/queries/listings');
 const router  = express.Router();
 
 
@@ -20,6 +20,24 @@ router.get('/:id', (req, res) => {
   })
 
 })
+
+//post route for creating new listing
+router.post('/', (req, res) => {
+const listing = req.body
+console.log("reqbody: ", req.body)
+if (!listing.title || !listing.description || !listing.price || !listing.img) {
+  return res.send("Please complete entire form")
+}
+if (isNaN(listing.price) || listing.price < 1) {
+  return res.send("Please enter a valid price")
+}
+createListing(listing)
+.then(() => {
+  res.redirect('/')
+})
+
+})
+
 
 router.post('/', (req, res) => {
   let min = req.body.lowest_price * 100;

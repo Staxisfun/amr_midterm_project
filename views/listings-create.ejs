@@ -10,16 +10,17 @@
 <body>
   <%- include('partials/_header') %>
   <h1>Create Listing</h1>
-  <div class="container">
+  <form action="/listings" method="post" id="container">
+
     <div class="title"><span class="form-title">Title:</span><input type="text" name="title" placeholder="title"></div>
 
-    <div class="discription"><span class="form-title">Description:</span><textarea class="descrip-textarea" name="Text1" cols="70" rows="7" placeholder="description"></textarea></div>
+    <div class="discription"><span class="form-title">Description:</span><textarea class="descrip-textarea" name="description" cols="70" rows="7" placeholder="description"></textarea></div>
 
     <div class="price"><span class="form-title">Price:</span><input type="text" name="price" placeholder="price"></div>
 
-    <div class="imgURL"><span class="form-title">URL:</span><input type="text" name="imgURL" placeholder="imgURL"></div>
-  </div>
-  <button type="submit" form="nameform" value="Submit">Submit</button>
+    <div class="imgURL"><span class="form-title">URL:</span><input type="text" name="img" placeholder="img"></div>
+  </form>
+  <button type="submit" form="container" value="Submit">Submit</button>
 
 
 

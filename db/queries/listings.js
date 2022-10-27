@@ -28,6 +28,14 @@ const getListings = (min, max) => {
   });
 };
 
+const createListing = (listing) => {
+
+return db.query(`INSERT INTO listings (title, description, price, img) VALUES ($1, $2, $3, $4)`, [listing.title, listing.description, listing.price, listing.img])
+
+
+}
+
+
 const getAllListings = () => {
   return db.query('SELECT * FROM listings;')
     .then(listings => {
@@ -43,4 +51,4 @@ const getListing = (id) => {
     });
 };
 
-module.exports = { getListings, getListing, getAllListings };
+module.exports = { getListings, getListing, getAllListings, createListing };
