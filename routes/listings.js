@@ -12,29 +12,24 @@ router.get('/create', (req, res) => {
 
 router.get('/:id', (req, res) => {
   const listingID = req.params.id
-  const userID = +req.headers.cookie.split("=")[1];    // take cookies from header -- '+' coverts it to number
-  console.log("userID:", userID);
-  console.log("listings id:", listingID)
+  const userID = +req.headers.cookie.split("=")[1];
+  // take cookies from header -- '+' coverts it to number
+  // console.log("userID:", userID);
+  // console.log("listings id:", listingID)
+
   getListing(listingID).then((data) => {
-    console.log("listing data:", {data : {...data, ...{currentUserId: userID}}});
     res.render('listing', {data : {...data, ...{currentUserId: userID}}});
   })
+
 })
 
 
 
 
 router.get('/', (req, res) => {
-  // let listings = JSON.stringify(getListings())
-  let listings = [];
   getListings().then((data) => {
-    console.log("data: ", data)
-    // listings = JSON.stringify(data)
     res.render('listings', {data});
-    // listings = JSON.stringify(data)
-    // res.render('listings', {listings:listings});
   })
-  console.log("listing: ", listings)
 });
 
 
