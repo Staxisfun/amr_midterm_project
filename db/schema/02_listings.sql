@@ -5,7 +5,7 @@ CREATE TABLE listings (
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   title VARCHAR(255) NOT NULL,
   description TEXT,
-  price INTEGER NOT NULL DEFAULT 0,
+  price DECIMAL(10, 2) NOT NULL DEFAULT 0,
   img TEXT NOT NULL,
   is_sold BOOLEAN DEFAULT FALSE
 );

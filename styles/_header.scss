@@ -3,8 +3,18 @@
   box-sizing: border-box;
 }
 
+// #username {
+
+// }
+
+.fa-gamepad {
+  font-size: 50px;
+  color: #22aeff;
+  outline: black;
+}
+
 body,
-html {
+html{
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   background-color: #cdcbcb;
@@ -52,9 +62,20 @@ nav {
   display: flex;
   width: 25%;
   font-size: 20px;
-  justify-content: space-between;
+  justify-content: flex-end;
   .link {
     color: #f9fafb;
+    padding: 0 20px;
   }
 }
 
+#username{
+  font-weight: 10;
+  display: flex;
+  width: 15%;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+  color: #f9fafb;
+  margin-left: -860px;
+}

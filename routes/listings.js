@@ -39,6 +39,9 @@ router.get('/', (req, res) => {
   const userID = +req.headers.cookie.split("=")[1]; // take cookies from header -- '+' coverts it to number
   getUserById(userID)
   .then((user) => {
+
+    console.log({user});
+    
     getAllListings()
       .then((data) => {
         res.render('listings', { data, user });
@@ -69,8 +72,8 @@ router.post('/', (req, res) => {
 
 
     router.post('/filter', (req, res) => {
-      let min = req.body.lowest_price * 100;
-      let max = req.body.highest_price * 100;
+      let min = req.body.lowest_price;
+      let max = req.body.highest_price;
       const userID = +req.headers.cookie.split("=")[1]; // take cookies from header -- '+' coverts it to number
       getUserById(userID).then((user) => {
         getListings(min, max)
