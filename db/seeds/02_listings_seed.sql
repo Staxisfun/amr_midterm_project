@@ -1,7 +1,7 @@
 
 INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (10, 'The Incredible Hulk', 'hulk smash', 35.99, 'https://miro.medium.com/max/1400/0*XbkhdmnwCKiu4SIs.jpg', FALSE);
 INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (10, 'Call Of Duty', 'shooty shooty bang bang', 50.99, 'https://news.xbox.com/en-us/wp-content/uploads/sites/2/2022/06/Call-of-Duty-Modern-Warfare-II_Reveal_X1_Wire_Hero_1920x1080-b5aea4e5ca6046ac478e.jpg', FALSE);
-INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (10, 'Super Smash Bros', 'lets get super smash bros!', 100, 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/games/switch/s/super-smash-bros-ultimate-switch/hero', FALSE);
+INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (10, 'Super Smash Bros', 'lets smash!', 100, 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/games/switch/s/super-smash-bros-ultimate-switch/hero', FALSE);
 INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (10, 'NHL 2022', 'go canucks go', 50.99, 'https://media.contentapi.ea.com/content/dam/ea/nhl/nhl-22/common/buy-page/nhl22-featured-image-16x9.jpg.adapt.crop191x100.1200w.jpg', FALSE);
 INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (10, 'Spider Man', 'stick stick stick', 45.99, 'https://m.media-amazon.com/images/I/81mliotBKzL._AC_SX425_.jpg', FALSE);
 INSERT INTO listings (user_id, title, description, price, img, is_sold) VALUES (10, 'Mario Party', 'paaaaaarrttyyy', 60.99, 'https://assets1.ignimgs.com/2019/05/22/mario-party-9---button-1558566997850.jpg', FALSE);

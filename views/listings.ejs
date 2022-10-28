@@ -20,11 +20,16 @@
       <div class="listing">
         <div> <%= data[i].title %></div>
         <a href="/listings/<%= data[i].id %>">
-          <img src="<%= data[i].img %>"/>
+          <% if (data[i].is_sold) { %>
+            <img src="https://www.pngmart.com/files/7/Sold-PNG-Photo.png"/>
+          <% } else { %>
+            <img src="<%= data[i].img %>"/>
+          <%  } %>
         </a>
         <div class="price">$ <%= Number(data[i].price)%></div>
       </div>
     <% } %>
+
 
 </section>
 </body>

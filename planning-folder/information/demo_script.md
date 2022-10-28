@@ -6,7 +6,7 @@ A: I was actually planning on doing some gaming, I've been holding off on gettin
 
 M: Yeah, I actually heard that some LHL students have created a new website for buying and selling games.
 
-R: Oh do you mean GAMR? I'm actually looking to buy a new game. Do you guys want to check it out?
+R: Oh do you mean GAMR? I'm actually looking to buy a new game as well. Do you guys want to check it out?
 
 A&M: YEAH!!
 
@@ -28,9 +28,8 @@ R: Welcome to GAMR! A site where you can buy and sell games as a user or admin.
   
 # R: *Write an email to the seller*
 
-Hey, I want to buy this game.
-Thanks,
-Ray.
+R: As the user clicks the email seller button, it opens up the email app with seller's email populated ...
+send them a message.... and the seller should get an email soon
 
 # R: *Show that the seller has received the email*
 
@@ -38,19 +37,25 @@ Ray.
 1. send a message via app, email, or text back on negotiations in buying the said item
 - Looks like I got an email....
 2. mark items as SOLD!,
-- once I sell a game, I go back a mark the game as sold to let other users know 
+- once I sell a game, I go back a mark the game as sold to let other users know better take out that listing
 3. post items, which can be seen by others
-- this will be how I would enter in games that I want to sell...
+- this will be how I would enter in games that I want to sell... as you can see it opens up a form where I can input 
 # - Name, description, price, url --- for new game to be added/create listing
 #  - CyberPunk, nice game, $39.99, ----url link-----
 4. remove items from the site
-- actually I'm going to keep this game.. better remove it...
+- actually a friend of mine wanted to borrow this game.. better remove this post...
+
+### ACTION -- EXPLANATION ###
 
 # A: Well it looks like that's all I need to do for now. Aldwin leaves (LITERALLY)..
 
 
 ### ending 
-R: ..that wraps up our presentation. For the midterm experience as a whole, 
+R: ..that concludes our presentation. thank you everyone.
+
+
+<!-- option -->
+For the midterm experience as a whole, 
 I learned a lot about the github workflow and working with others. 
 I enjoyed the front end part more than the back end, it was nice to make things to look the way we wanted.
 how about you Matt?

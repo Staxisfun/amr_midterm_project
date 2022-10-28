@@ -17,11 +17,18 @@
       <div class="listing">
         <div> <%= favoritesData[i].title %></div>
         <a href="/listings/<%= favoritesData[i].listing_id %>">
+          <% if (favoritesData[i].is_sold) { %>
+            <img src="https://www.pngmart.com/files/7/Sold-PNG-Photo.png"/>
+          <% } else { %>
           <img src="<%= favoritesData[i].img %>"/>
+          <%  } %>
         </a>
         <div class="price">$ <%= Number(favoritesData[i].price) %></div>
       </div>
       <% } %>
+
+
+
 
 
     </div>
